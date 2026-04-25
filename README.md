@@ -1,12 +1,12 @@
 # CodeBoussole 🧭
 
-Extension VS Code qui génère du **pseudo-code en français** comme échafaudage temporaire avant d'écrire ton code.
+Extension VS Code qui génère du **pseudo-code détaillé** comme échafaudage temporaire avant d'écrire ton code.
 
 ## L'idée
 
-Les assistants IA actuels (Copilot, Claude Code, Cursor) écrivent le code à ta place. C'est puissant, mais on perd le contrôle, on perd le geste, et au bout d'un moment on ne réfléchit plus vraiment.
+Les assistants IA actuels (Copilot, Claude Code, Cursor) écrivent le code à ta place. C'est puissant, mais on perd le contrôle, on perd le geste, et au bout d'un moment on ne réfléchit plus vraiment à ce qu'on fait.
 
-CodeBoussole prend le parti inverse : l'IA ne touche jamais à ton code. Elle te génère un **plan détaillé en pseudo-code français**, comme des traits de construction au crayon en dessin. Tu lis le plan, tu valides la logique, tu écris le code, tu effaces les traits.
+CodeBoussole prend le parti inverse : l'IA ne touche jamais à ton code. Elle te génère un **plan détaillé en pseudo-code**, comme des traits de construction au crayon en dessin. Tu lis le plan, tu valides la logique, tu écris le code, tu effaces les traits.
 
 L'IA t'aide à penser. C'est toi qui écris.
 
@@ -19,16 +19,22 @@ L'IA t'aide à penser. C'est toi qui écris.
 
 Les commentaires générés sont préfixés avec `//~` (ou l'équivalent du langage) pour les distinguer de ta vraie documentation et permettre la suppression sélective.
 
+Le pseudo-code est généré dans la langue de ton code (français si tu commentes en français, anglais sinon).
+
 ## Philosophie
 
-- **Pseudo-code détaillé, pas résumé** — granularité ligne-à-ligne, le code en dessous est une traduction mécanique
+- **Pseudo-code détaillé, pas résumé** — granularité ligne-à-ligne, le code en dessous doit être une traduction mécanique
 - **Pas de devinette** — si le contexte manque, le commentaire dit `TODO: vérifier X` plutôt que d'inventer
-- **Français par défaut** — penser dans sa langue, coder dans la sienne
-- **Éphémère** — les commentaires sont un échafaudage, pas de la doc
+- **Éphémère** — les commentaires sont un échafaudage, pas de la doc permanente
+- **Tu gardes le contrôle** — l'extension n'écrit jamais de code exécutable
 
 ## Installation
 
-> Extension perso pour le moment, pas publiée sur le Marketplace.
+### Depuis le Marketplace
+
+À venir.
+
+### Depuis les sources
 
 ```bash
 git clone https://github.com/<ton-pseudo>/codeboussole.git
@@ -37,19 +43,13 @@ npm install
 npm run compile
 ```
 
-Puis dans VS Code : `F5` pour lancer une fenêtre de test avec l'extension chargée.
+Puis `F5` dans VS Code pour lancer une fenêtre de test avec l'extension chargée.
 
 ## Configuration
 
 Renseigne ta clé API Anthropic dans les paramètres VS Code :
 
 - `codeboussole.apiKey` : ta clé `sk-ant-...`
-
-## Statut
-
-🚧 Projet personnel en cours de développement. Pas de garantie, pas de roadmap, pas de support — c'est avant tout un outil que je construis pour mon propre usage quotidien.
-
-Si ça te parle et que tu veux l'utiliser, fork bienvenu.
 
 ## Licence
 
