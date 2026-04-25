@@ -14,10 +14,52 @@
   "contributes": {
     "commands": [
       {
-        "command": "codeboussole.helloWorld",
-        "title": "Hello World"
+        "command": "codeboussole.generatePlan",
+        "title": "CodeBoussole: Générer un plan",
+        "category": "CodeBoussole"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "codeboussole.generatePlan",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "CodeBoussole",
+      "properties": {
+        "codeboussole.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Clé API Mistral",
+          "markdownDescription": "Ta clé API Mistral. Récupérable sur [console.mistral.ai](https://console.mistral.ai/)."
+        },
+        "codeboussole.model": {
+          "type": "string",
+          "default": "codestral-latest",
+          "description": "Modèle Mistral à utiliser",
+          "enum": [
+            "codestral-latest",
+            "mistral-large-latest",
+            "mistral-medium-latest",
+            "mistral-small-latest"
+          ],
+          "enumDescriptions": [
+            "Codestral — spécialisé pour le code (recommandé)",
+            "Mistral Large — modèle le plus puissant",
+            "Mistral Medium — équilibre coût/performance",
+            "Mistral Small — léger et rapide"
+          ]
+        },
+        "codeboussole.markerPrefix": {
+          "type": "string",
+          "default": "~",
+          "description": "Préfixe pour marquer les commentaires générés (ex: //~ ou #~)"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -34,15 +76,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.116.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
-    "eslint": "^9.39.3",
+    "@types/node": "^22.19.17",
+    "@types/vscode": "^1.116.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "esbuild": "^0.27.3",
+    "eslint": "^9.39.3",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.56.1"
   }
 }
