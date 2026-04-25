@@ -1,56 +1,71 @@
-# CodeBoussole 🧭
+# codeboussole README
 
-Extension VS Code qui génère du **pseudo-code détaillé** comme échafaudage temporaire avant d'écrire ton code.
+This is the README for your extension "codeboussole". After writing up a brief description, we recommend including the following sections.
 
-## L'idée
+## Features
 
-Les assistants IA actuels (Copilot, Claude Code, Cursor) écrivent le code à ta place. C'est puissant, mais on perd le contrôle, on perd le geste, et au bout d'un moment on ne réfléchit plus vraiment à ce qu'on fait.
+Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-CodeBoussole prend le parti inverse : l'IA ne touche jamais à ton code. Elle te génère un **plan détaillé en pseudo-code**, comme des traits de construction au crayon en dessin. Tu lis le plan, tu valides la logique, tu écris le code, tu effaces les traits.
+For example if there is an image subfolder under your extension project workspace:
 
-L'IA t'aide à penser. C'est toi qui écris.
+\!\[feature X\]\(images/feature-x.png\)
 
-## Comment ça marche
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-1. Place ton curseur où tu veux écrire ta logique
-2. Raccourci `Cmd+Alt+P` (ou `Ctrl+Alt+P` sur Linux/Windows) → CodeBoussole insère un pseudo-code détaillé en commentaires
-3. Tu lis, tu valides, tu écris ton code en dessous
-4. Raccourci `Cmd+Alt+G` → tu effaces tous les traits de construction
+## Requirements
 
-Les commentaires générés sont préfixés avec `//~` (ou l'équivalent du langage) pour les distinguer de ta vraie documentation et permettre la suppression sélective.
+If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-Le pseudo-code est généré dans la langue de ton code (français si tu commentes en français, anglais sinon).
+## Extension Settings
 
-## Philosophie
+Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-- **Pseudo-code détaillé, pas résumé** — granularité ligne-à-ligne, le code en dessous doit être une traduction mécanique
-- **Pas de devinette** — si le contexte manque, le commentaire dit `TODO: vérifier X` plutôt que d'inventer
-- **Éphémère** — les commentaires sont un échafaudage, pas de la doc permanente
-- **Tu gardes le contrôle** — l'extension n'écrit jamais de code exécutable
+For example:
 
-## Installation
+This extension contributes the following settings:
 
-### Depuis le Marketplace
+* `myExtension.enable`: Enable/disable this extension.
+* `myExtension.thing`: Set to `blah` to do something.
 
-À venir.
+## Known Issues
 
-### Depuis les sources
+Calling out known issues can help limit users opening duplicate issues against your extension.
 
-```bash
-git clone https://github.com/<ton-pseudo>/codeboussole.git
-cd codeboussole
-npm install
-npm run compile
-```
+## Release Notes
 
-Puis `F5` dans VS Code pour lancer une fenêtre de test avec l'extension chargée.
+Users appreciate release notes as you update your extension.
 
-## Configuration
+### 1.0.0
 
-Renseigne ta clé API Anthropic dans les paramètres VS Code :
+Initial release of ...
 
-- `codeboussole.apiKey` : ta clé `sk-ant-...`
+### 1.0.1
 
-## Licence
+Fixed issue #.
 
-MIT
+### 1.1.0
+
+Added features X, Y, and Z.
+
+---
+
+## Following extension guidelines
+
+Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+
+* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+
+## Working with Markdown
+
+You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+
+* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
+* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
+* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+
+## For more information
+
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+**Enjoy!**
